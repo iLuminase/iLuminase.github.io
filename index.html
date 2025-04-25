@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a class="logo" href="#"><i class="fas fa-book"></i> Ebook</a>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="hover-underline"><a class="nav-link" href="#home">Trang chủ</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#gioi-thieu">Giới thiệu</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#courses">Khóa học</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#teacher">Giảng viên</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#review">Phản hồi</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="hover-underline"><a class="nav-link" href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="dark-mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="icons">
+            <div id="login-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+        <!-- login form -->
+
+        <form action="login.php" method="POST" class="login-form">
+            <h3>đăng nhập</h3>
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="mật khẩu" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember">
+                <label for="remember-me">ghi nhớ</label>
+            </div>
+            <a href="#" class="btn">
+                <span class="text text-1">đăng nhập</span>
+                <!-- <span class="text text-2" aria-hidden="true">đăng nhập</span> -->
+            </a>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts-->
+
+    <section class="trang-chu" id="home">
+
+        <div class="content">
+            <h3>khóa học hay và bổ ích</h3>
+            <p>Nhập văn bản của bạn ở đây.</p>
+            <a href="#" class="btn">
+                <span class="text text-1">Xem thêm</span>
+                <!-- <span class="text text-2" aria-hidden="true">xem thêm</span> -->
+            </a>    
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- gioi-thieu section starts -->
+
+    <section class="gioi-thieu" id="gioi-thieu">
+
+        <h1 class="heading">giới thiệu</h1>
+
+        <div class="container">
+
+            <figure class="gioi-thieu-image">
+                <img src="images/about-1.jpg" alt="" height="500">
+                <img src="images/about-2.jpg" alt="" class="gioi-thieu-img">
+            </figure>
+
+            <div class="gioi-thieu-content">
+                <h3>Hơn 10 năm kinh nghiệm đào tạo và giảng dạy</h3>
+                <p>Nhập văn bản của bạn ở đây.</p>
+                <p>Nhập văn bản của bạn ở đây.</p>    
+                <a href="#" class="btn">
+                    <span class="text text-1">xem thêm</span>
+                    <!-- <span class="text text-2" aria-hidden="true">xem thêm</span> -->
+                </a>        
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gioi-thieu section ends -->
+
+    <!-- subjects section starts -->
+
+    <section class="subjects">
+
+        <h1 class="heading">các danh mục</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <!-- <img src="images/social_html5_html_31.ico" alt=""> -->
+                <h3>HTML & CSS</h3>
+                <p>ngôn ngữ xây dựng trang web</p>
+            </div>
+
+            <div class="box">
+                <!-- <img src="images/oop.ico" alt=""> -->
+                <h3>Java</h3>
+                <p>Ngôn ngữ lập trình</p>
+            </div>
+
+            <div class="box">
+                <!-- <img src="images/database.ico" alt=""> -->
+                <h3>SQL</h3>
+                <p>ngôn ngữ giao tiếp cơ sở dữ liệu</p>
+            </div>
+
+            <div class="box">
+                <!-- <img src="images/subject-4.png" alt=""> -->
+                <h3>Javascript</h3>
+                <p>ngôn ngữ lập trình trang web</p>
+            </div>
+
+            <div class="box">
+                <h3>Python</h3>
+                <p>ngôn ngữ lập trình</p>
+            </div>
+
+            <div class="box">
+                <h3>Bootstrap</h3>
+                <p>thư viện frontend</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- subject section ends -->
+
+    <!-- courses section starts -->
+
+    <section class="khoa-hoc" id="courses">
+
+        <h1 class="heading">khóa học nổi bật</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/html-course.jpg" alt="">
+                    <h3>Cơ bản</h3>
+                </div>
+                <div class="content">
+                    <h4>199.000VND</h4>
+                    <p>cập nhật 23/03/2025</p>
+                    <h3>HTML, CSS và Javascript cơ bản</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(785)</span>
+                    </div>
+                    <div class="icons">
+                        <span><i class="far fa-bookmark"></i> 145 lessons</span>
+                        <span><i class="far fa-clock"></i> 10h 25m 9s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/c++-basic.png" alt="">
+                    <h3>Cơ bản</h3>
+                </div>
+                <div class="content">
+                    <h4>299.000VND</h4>
+                    <p>cập nhật 25/09/2024</p>
+                    <h3>Lập trình c/c++ cơ bản</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(785)</span>
+                    </div>
+                    <div class="icons">
+                        <span><i class="far fa-bookmark"></i> 15 lessons</span>
+                        <span><i class="far fa-clock"></i> 8h 25m 9s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/java-basic.jpeg" alt="">
+                    <h3>Cơ bản</h3>
+                </div>
+                <div class="content">
+                    <h4>499.000VND</h4>
+                    <p>cập nhật 25/09/2024</p>
+                    <h3>lập trình Java cơ bản</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(1.785)</span>
+                    </div>
+                    <div class="icons">
+                        <span><i class="far fa-bookmark"></i> 35 lessons</span>
+                        <span><i class="far fa-clock"></i> 9h 25m 9s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/python-basic.png" alt="">
+                    <h3>Cơ bản</h3>
+                </div>
+                <div class="content">
+                    <h4>699.000VND</h4>
+                    <p>cập nhật 25/09/2021</p>
+                    <h3>lập trình Python cơ bản</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(351)</span>
+                    </div>
+                    <div class="icons">
+                        <span><i class="far fa-bookmark"></i> 45 lessons</span>
+                        <span><i class="far fa-clock"></i> 8h 25m 9s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/xay-dung-website-ban-hang-04-4.jpg" alt="">
+                    <h3>nâng cao</h3>
+                </div>
+                <div class="content">
+                    <h4>1.350.000VND</h4>
+                    <p>updated 25/09/2021</p>
+                    <h3>xây dựng web bán hàng</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(785)</span>
+                    </div>
+                    <div class="icons">
+                        <span><i class="far fa-bookmark"></i> 115 lessons</span>
+                        <span><i class="far fa-clock"></i> 11h 25m 9s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- courses section ends -->
+
+    <!-- teacher section starts -->
+
+    <section class="teacher" id="teacher">
+
+        <h1 class="heading">các giảng viên</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/avatar-1.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>PhatDevjulio</h3>
+                    <span>Hướng dẫn</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/avatar-1.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>PhatDevjulio</h3>
+                    <span>Hướng dẫn</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/avatar-1.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>PhatDevjulio</h3>
+                    <span>Hướng dẫn</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/avatar-1.png" alt="">
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>PhatDevjulio</h3>
+                    <span>Hướng dẫn</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- teacher section ends -->
+
+    <!-- review section starts -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading">phản hồi từ học viên</h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Ngoc Tran Nguyen</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Trần Ngọc Linh</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Thuy Ngan Bui</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Tien Linh Nguyen</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Lam Dinh Shroud</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Nhập văn bản của bạn ở đây.</p>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/default-review-avt.jpg" alt="">
+                        <div class="user-info">
+                            <h3>Anthony David</h3>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- blog section starts -->
+
+    <section class="blog" id="blog">
+
+        <h1 class="heading">bài viết</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/vs-code.jpg" alt="">
+                    <h3>04/04/2025</h3>
+                </div>
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                    <h3>hướng dẫn cài đặt visual code cho người mới bắt đầu</h3>
+                    <p>Visual Studio Code (VS Code) là một trình soạn thảo mã nguồn mở, miễn phí và đa nền tảng, được phát triển bởi Microsoft. Với giao diện đơn giản, trực quan nhưng mạnh mẽ, VS Code hỗ trợ nhiều ngôn ngữ lập trình như JavaScript, Python, C++, Java,... 
+
+                    </p>
+                    <a href="#" class="btn">
+                        <span class="text text-1">xem thêm</span>
+                        <!-- <span class="text text-2" aria-hidden="true">xem thêm</span> -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/blog-2.jpg" alt="">
+                    <h3>04/04/2025</h3>
+                </div>
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                    <h3>người mới học lập trình nên bắt đầu từ đâu ?</h3>
+                    <p>
+                        Nếu bạn là người mới bắt đầu học lập trình, có thể sẽ cảm thấy bối rối với việc chọn ngôn ngữ lập trình nào để bắt đầu. Dưới đây là một số gợi ý giúp bạn có thể bắt đầu học lập trình một cách hiệu quả nhất:
+                    </p>
+                    <a href="#" class="btn">
+                        <span class="text text-1">xem thêm</span>
+                        <!-- <span class="text text-2" aria-hidden="true">xem thêm</span> -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image shine">
+                    <img src="images/blog-3.jpg" alt="">
+                    <h3>04/04/2025</h3>
+                </div>
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>by admin</a>
+                    </div>
+                    <h3>cơ hội việc làm cho lập trình viên sau khi tốt nghiệp</h3>
+                    <p>
+                        Sau khi tốt nghiệp ngành lập trình, bạn sẽ có nhiều cơ hội việc làm trong các lĩnh vực khác nhau như phát triển phần mềm, thiết kế web, phát triển ứng dụng di động, quản trị hệ thống, an ninh mạng và nhiều lĩnh vực khác liên quan đến công nghệ thông tin.
+                    </p>
+                    <a href="#" class="btn">
+                        <span class="text text-1">xem thêm</span>
+                        <!-- <span class="text text-2" aria-hidden="true">xem thêm</span> -->
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blog section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">Liên hệ</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/contact.png" alt="">
+            </div>
+            <form action="">
+                <h3>gửi tin nhắn</h3>
+                <input type="text" placeholder="họ tên" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="số điện thoại" class="box">
+                <textarea placeholder="tin nhắn" class="box" cols="30" rows="10"></textarea>
+                <a href="#" class="btn">
+                    <span class="text text-1">Gửi</span>
+                    <!-- <span class="text text-2" aria-hidden="true">gửi</span> -->
+                </a>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section stars -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>find us here</h3>
+                <p>Nhập văn bản ở đây</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact us</h3>
+                <p>+84 348 302 622</p>
+                <a href="#" class="link">tienphat3968@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>localization</h3>
+                <p>P.Hiệp Phú, TP. Thủ Đức, Việt Nam</p>
+            </div>
+
+        </div>
+        <div class="credit">created by <span>ninjashub </span> |
+            Edited by <span>PhatDevjulio</span> | all rights are reserved!</div>
+    </section>
+
+    <!-- footer section ends -->
+
+
+<!-- Thêm Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Thêm Font Awesome -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+</body>
+</html>

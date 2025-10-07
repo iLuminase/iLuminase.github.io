@@ -1,4 +1,4 @@
-# Phatnt's Portfolio Project
+# Phatdevio's Portfolio Project
 
 [iLuminase.github.io](https://iluminase.github.io/)
 

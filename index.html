@@ -1,6 +1,27 @@
-<!-- Crredit to: https://github.com/devsyedmohsin
-Edited by: PhatNguyen 
--->
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:title"
+  content="Nguyen Tien Phat's Networking & Programming Blog"
+/>
+<meta
+  name="twitter:description"
+  content="Welcome to my personal blog and portfolio! I am a passionate learner in computer networking and programming,
+sharing my journey, projects, and insights on topics like TCP/IP, HTTP, Python, and more. Explore my work,
+ articles, and connect with me for collaborations or discussions!"
+/>
+
+<meta property="og:url" content="https://ossportfolio.netlify.app" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Nguyen Tien Phat's Networking & Programming Blog"
+/>
+<meta
+  property="og:description"
+  content="Welcome to my personal blog and portfolio! I am a passionate learner in computer networking and programming,
+sharing my journey, projects, and insights on topics like TCP/IP, HTTP, Python, and more. Explore my work,
+ articles, and connect with me for collaborations or discussions!"
+/>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,45 +35,54 @@ Edited by: PhatNguyen
 
     <meta
       name="description"
-      content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
-       with hands-on experience in building scalable and efficient web applications. Here, you'll find my projects,
-        open-source contributions, and more. Feel free to reach out for inquiries or potential collaborations—
-        I'd love to connect!"
+      content="Welcome to my personal blog and portfolio! I am a passionate learner in computer networking and programming,
+       sharing my journey, projects, and insights on topics like TCP/IP, HTTP, Python, and more. Explore my work,
+        articles, and connect with me for collaborations or discussions!"
     />
 
     <!-- Google / Search Engine Tags -->
-<meta itemprop="name" content="Tien Phat's Portfolio">
-<meta itemprop="description" content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
+    <meta
+      itemprop="name"
+      content="Nguyen Tien Phat's Networking & Programming Blog"
+    />
+    <meta
+      itemprop="description"
+      content="Welcome to my personal blog and portfolio! I am a passionate learner in computer networking and programming,
+sharing my journey, projects, and insights on topics like TCP/IP, HTTP, Python, and more. Explore my work,
+ articles, and connect with me for collaborations or discussions!"
+    />
+
+    <!-- Reference screenshot of updated site's header in place of content -->
+    <meta itemprop="image" content="assets/images/sharing-card.png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://ossportfolio.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tien Phat's Portfolio" />
+    <meta
+      property="og:description"
+      content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
 with hands-on experience in building scalable and efficient web applications. Here, you'll find my projects,
  open-source contributions, and more. Feel free to reach out for inquiries or potential collaborations—
- I'd love to connect!">
+ I'd love to connect!"
+    />
+    <!-- Reference screenshot of updated site's header in content -->
+    <meta property="og:image" content="assets/images/sharing-card.png" />
 
-<!-- Reference screenshot of updated site's header in place of content -->
-<meta itemprop="image" content="assets/images/sharing-card.png">
-
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://ossportfolio.netlify.app">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tien Phat's Portfolio">
-<meta property="og:description" content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tien Phat's Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
 with hands-on experience in building scalable and efficient web applications. Here, you'll find my projects,
  open-source contributions, and more. Feel free to reach out for inquiries or potential collaborations—
- I'd love to connect!">
-<!-- Reference screenshot of updated site's header in content -->
-<meta property="og:image" content="assets/images/sharing-card.png">
+ I'd love to connect!"
+    />
+    <!-- Reference screenshot of updated site's header in content -->
+    <meta name="twitter:image" content="assets/images/sharing-card.png" />
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tien Phat's Portfolio">
-<meta name="twitter:description" content="Welcome to my portfolio website! I am a passionate backend developer specializing in Java and Spring Boot,
-with hands-on experience in building scalable and efficient web applications. Here, you'll find my projects,
- open-source contributions, and more. Feel free to reach out for inquiries or potential collaborations—
- I'd love to connect!">
-<!-- Reference screenshot of updated site's header in content -->
-<meta name="twitter:image" content="assets/images/sharing-card.png">
-
-
-<!-- Update favicon href attribute with image of yourself -->
+    <!-- Update favicon href attribute with image of yourself -->
     <link
       rel="shortcut icon"
       href="assets/images/favicons.png"
@@ -69,34 +99,33 @@ with hands-on experience in building scalable and efficient web applications. He
       crossorigin
     />
 
-    <link rel="stylesheet" href="style.css"  />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
     <!-- Your name here -->
-    <title>Tien Phat's Portfolio</title>
+    <title>Nguyen Tien Phat's Networking & Programming Blog</title>
   </head>
 
   <body>
-
     <script>
       const theme = localStorage.getItem("theme") || "dark";
       document.body.classList.add(theme);
     </script>
 
     <header class="header">
-
       <div class="menu-btn-container">
         <div class="container">
-          <button type="button"  class="menu-btn">menu</button>
+          <button type="button" class="menu-btn">menu</button>
         </div>
       </div>
 
       <nav class="nav hidden">
         <ol class="nav-items">
           <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#skills">Skills</a></li>
           <li class="nav-item"><a href="#work">My Work</a></li>
           <li class="nav-item"><a href="#blog">See Blog</a></li>
-          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item"><a href="#journey">My Journey</a></li>
           <li class="nav-item">
             <a href="#contact" data-focused="last-focused">Contact</a>
           </li>
@@ -108,342 +137,424 @@ with hands-on experience in building scalable and efficient web applications. He
           <!-- Replace with your name and job title -->
           <h1 class="h1">
             <span>Hi, I'm Nguyen Tien Phat</span>
-            <span>Backend Software Developer</span>
+            <span>Networking & Programming Enthusiast</span>
           </h1>
-
           <!-- Add a small introductory paragraph about yourself -->
           <p class="header-text">
-            Im a dedicated backend developer with a strong
-             focus on Java and Spring Boot. I thrive on solving complex problems and building robust, scalable
-              web applications that deliver seamless user experiences. With a solid foundation in software development 
-              and a passion for continuous learning, I’m always eager to take on new challenges and contribute 
-              to innovative projects. Explore my work, and don’t hesitate to reach out—I’d love to connect
-               and collaborate!
+            I'm a dedicated learner passionate about computer networking and
+            programming. I love exploring protocols like TCP/IP and HTTP,
+            building projects with languages like Python and Java, and sharing
+            my knowledge through this blog. Join me on my journey of continuous
+            learning and discovery in the world of tech!
           </p>
 
           <div class="header-btns">
-            <a href="#contact" class="btn btn-cta">Hire me</a>
-            <a href="#work" class="btn btn-secondary">See my work</a>
+            <a href="#contact" class="btn btn-cta">Contact me</a>
+            <a href="#work" class="btn btn-secondary">See my projects</a>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-<!-- 
-      <section class="client">
-        <div class="container">
-          <h2 class="h2">Trusted by</h2>
-          <div class="logos">
-     
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/stripe.svg"
-                alt="Ideacraft"
-                class="logo hide to-top"
-              />
+    <section class="skills">
+      <div class="container">
+        <h2 class="h2" id="skills">Skills</h2>
+        <div class="logos">
+          <div class="logo-group">
+            <img
+              loading="lazy"
+              src="assets/images/skills/html.svg"
+              alt="html"
+              class="logo hide to-top"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/css.svg"
+              alt="css"
+              class="logo"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/javascript.svg"
+              alt="js"
+              class="logo hide to-bottom"
+            />
+          </div>
+          <div class="logo-group">
+            <img
+              loading="lazy"
+              src="assets/images/skills/java.svg"
+              alt="java"
+              class="logo hide to-top"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/python.svg"
+              alt="python"
+              class="logo"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/csharp.svg"
+              alt="csharp"
+              class="logo hide to-bottom"
+            />
+          </div>
+          <div class="logo-group">
+            <img
+              loading="lazy"
+              src="assets/images/skills/spring.svg"
+              alt="flutter"
+              class="logo hide to-top"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/flutter.svg"
+              alt="react"
+              class="logo"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/react.png"
+              alt="spring"
+              class="logo hide to-bottom"
+            />
+          </div>
+          <div class="logo-group">
+            <img
+              loading="lazy"
+              src="assets/images/skills/mysql.svg"
+              alt="sql"
+              class="logo hide to-top"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/jira-svgrepo-com.svg"
+              alt="jira"
+              class="logo"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/javafx.png"
+              alt="javafx"
+              class="logo hide to-bottom"
+            />
+          </div>
+          <div class="logo-group">
+            <img
+              loading="lazy"
+              src="assets/images/skills/bash.svg"
+              alt="bash"
+              class="logo hide to-top"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/git.svg"
+              alt="git"
+              class="logo"
+            />
+            <img
+              loading="lazy"
+              src="assets/images/skills/postman.png"
+              alt="postman"
+              class="logo hide to-bottom"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/datastax.svg"
-                alt="Golden grid"
-                class="logo"
-              />
+    <section class="work">
+      <div class="container">
+        <h2 class="h2" id="work">Selected Work</h2>
+        <div class="work-boxes">
+          <div class="work-box">
+            <div class="work-textbox">
+              <!-- Add your project title here -->
+              <h3 class="h3">Edu-Book Free learning courses</h3>
+              <!-- Add small description of your project  -->
+              <p class="work-text">
+**Edu-web** is a web-based educational platform designed to facilitate online learning, resource sharing, and student engagement. The project emphasizes a visually appealing, interactive, and responsive user experience.
+              </p>
+              <ol class="work-technologies">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
 
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/coke.svg"
-                alt="Theia"
-                class="logo hide to-bottom"
-              />
-            </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/gm.svg"
-                alt="General motors"
-                class="logo hide to-top"
-              />
+              </ol>
 
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/shares.svg"
-                alt="Chippy"
-                class="logo"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/shopify.svg"
-                alt="Shopify"
-                class="logo hide to-bottom"
-              />
+              <div class="work-links">
+                <!-- Add url of project in href attribute -->
+                <a
+                  href="https://demo-edubook.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="link"
+                  >Explore this project</a
+                >
+
+                <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                <a href="#" target="_blank" rel="noopener" title="Source code">
+                  <img
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
             </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/agency-elevation.svg"
-                alt="Agency elevation"
-                class="logo hide to-top"
-              /><img
-                loading="lazy"
-                src="assets/images/trusted-by/gitlab.svg"
-                alt="Ron jones"
-                class="logo"
-              /><img
-                loading="lazy"
-                src="assets/images/trusted-by/duolingo.svg"
-                alt="Mighty furniture's"
-                class="logo hide to-bottom"
-              />
-            </div>
-            <div class="logo-group">
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/coyote.svg"
-                alt="Bulls eye"
-                class="logo hide to-top"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/astrato.svg"
-                alt="Chippy"
-                class="logo"
-              />
-              <img
-                loading="lazy"
-                src="assets/images/trusted-by/mercado.svg"
-                alt="Fastlane"
-                class="logo hide to-bottom"
-              />
+
+            <!-- Update img src and alt attribute  -->
+            <div class="work-gallery">
+              <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+              <div class="gallery-images">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-2.png"
+                  alt="Project screenshot 1"
+                  class="gallery-img active"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-1.png"
+                  alt="Project screenshot 2"
+                  class="gallery-img"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-2-2.png"
+                  alt="Project screenshot 3"
+                  class="gallery-img"
+                />
+              </div>
+              <button class="gallery-next" aria-label="Next image">&gt;</button>
             </div>
           </div>
         </div>
-      </section>
- -->
-      <section class="work">
-        <div class="container">
-          <h2 class="h2" id="work">Selected Work</h2>
-          <div class="work-boxes">
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">Edu Books</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  An education webpage that provides a platform for students to learn and explore various subjects. The website features a user-friendly interface, allowing students to easily navigate through different topics and access educational resources. With a focus on enhancing the learning experience, Edu Books aims to empower students with knowledge and skills for their academic success.
+      </div>
+
+      <div class="container">
+        <div class="work-boxes">
+          <div class="work-box">
+            <div class="work-textbox">
+              <!-- Add your project title here -->
+              <h3 class="h3">DentalClinic Management</h3>
+              <!-- Add small description of your project  -->
+              <p class="work-text">
+                🌟 **Introducing NhaKhoa3B!** 🌟
+
+We are excited to announce the launch of NhaKhoa3B — our comprehensive web-based dental clinic management solution. Built using the latest technologies (HTML, C#, CSS, and JavaScript), NhaKhoa3B streamlines appointment scheduling, patient records, and billing, all through a user-friendly interface.
+              </p>
+              <!-- Add technologies you used to build the project -->
+              <ol class="work-technologies">
+                <li>HTML5, CSS3, JScript</li>
+                <li>.NetFramework</li>
+                <li>MS SQL Server</li>
+              </ol>
+
+              <div class="work-links">
+                <!-- Add url of project in href attribute -->
+                <a
+                  href="https://github.com/iLuminase/NhaKhoa3B"
+                  target="_blank"
+                  rel="noopener"
+                  class="link"
+                  >Explore this project</a
+                >
+
+                <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                <a href="#" target="_blank" rel="noopener" title="Source code">
+                  <img
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Update img src and alt attribute  -->
+            <div class="work-gallery">
+              <button class="gallery-prev" aria-label="Previous image">&lt;</button>
+              <div class="gallery-images">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-3.png"
+                  alt="Project screenshot 1"
+                  class="gallery-img active"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-4.png"
+                  alt="Project screenshot 2"
+                  class="gallery-img"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-5.png"
+                  alt="Project screenshot 3"
+                  class="gallery-img"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-6.png"
+                  alt="Project screenshot 4"
+                  class="gallery-img"
+                />
+                <img
+                  loading="lazy"
+                  src="assets/images/work/work-7.png"
+                  alt="Project screenshot 5"
+                  class="gallery-img"
+                />
+              </div>
+              <button class="gallery-next" aria-label="Next image">&gt;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+
+    <section class="article" style="background: linear-gradient(135deg, var(--bg-color-secondary) 0%, rgba(255, 131, 139, 0.1) 100%); padding: var(--gutter-x-large) 0; border-radius: var(--radius); margin: var(--gutter-large) 0;">
+      <div class="container">
+        <h2 class="h2" id="blog">Shared Articles</h2>
+        <div class="article-boxes">
+          <article class="article-box featured-article">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h3">Understanding the TCP/IP Protocol Suite</h3>
+                <p class="article-text">
+                  Dive deep into the layers of the TCP/IP model, from physical
+                  to application layer. This comprehensive guide explains how
+                  data travels across networks, with practical examples and
+                  diagrams to make complex concepts accessible.
                 </p>
-                <!-- Add technologies you used to build the project -->
-                <ol class="work-technologies">
-                  <li>HTML, CSS</li>
-                  <li>JavaScript</li>
-                  <li>Bootstrap</li>
-                  <li>(Continue Develop)</li>
-                </ol>
-
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://demo-edubook.netlify.app/" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
               </div>
-
-
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/edu-2.png"
-                  alt="contribute dev"
-                />
-              </picture>
+              <div class="article-info">
+                <span class="reaction-count">
+                  <img src="./assets/images/heart-outline.svg" alt="heart" />
+                  150
+                </span>
+                <a
+                  href="https://dev.to/devsyedmohsin/22-useful-css-tips-and-tricks-every-developer-should-know-13c6"
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  >Continue reading</a
+                >
+              </div>
             </div>
-          </div>
-        </div>
-        
-
-        <div class="container">
-          <div class="work-boxes">
-            <div class="work-box">
-              <div class="work-textbox">
-                <!-- Add your project title here -->
-                <h3 class="h3">Dental Clinic Management System</h3>
-                <!-- Add small description of your project  -->
-                <p class="work-text">
-                  <!-- Winform app -->
-                  A dental clinic management system is a software application designed to streamline and automate various administrative and clinical tasks within a dental practice. It typically includes features such as appointment scheduling, patient records management, billing and invoicing, treatment planning, and reporting. The system aims to improve efficiency, enhance patient care, and simplify the overall management of the dental clinic.
+            <picture class="article-illustration">
+              <img
+                src="assets/images/featured-blog.webp"
+                alt="MacBook Pro"
+                loading="lazy"
+              />
+            </picture>
+          </article>
+          <article class="article-box">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h4">
+                  Socket Programming in Python: A Beginner's Guide
+                </h3>
+                <p class="article-text">
+                  Learn the basics of socket programming with Python. This
+                  tutorial covers creating client-server applications, handling
+                  connections, and understanding network communication
+                  fundamentals.
                 </p>
-                <!-- Add technologies you used to build the project -->
-                <ol class="work-technologies">
-                  <li>C# and .Netframework</li>
-                  <li>SQL Server</li>
-                  <li>RESTful API (future)<li>
-                </ol>
-
-                <div class="work-links">
-                  <!-- Add url of project in href attribute -->
-                  <a href="https://github.com/iLuminase/dental-system-c-ui-design" target="_blank" rel="noopener" class="link"
-                    >Explore this project</a
-                  >
-
-                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener"
-                    title="Source code"
-                  >
-                    <img
-                      src="assets/images/social-links/github.svg"
-                      alt="GitHub"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
               </div>
-
-
-         <!-- Update img src and alt attribute  -->
-              <picture class="work-img">
-                <img
-                  loading="lazy"
-                  src="assets/images/work/dentalclinic.png"
-                  alt="contribute dev"
-                />
-              </picture>
+              <div class="article-info">
+                <span class="reaction-count">
+                  <img
+                    src="./assets/images/heart-outline.svg"
+                    alt="heart"
+                    loading="lazy"
+                  />
+                  75
+                </span>
+                <a
+                  href="https://dev.to/devsyedmohsin/javascript-default-function-parameters-1i8j"
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  >Continue reading</a
+                >
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="article-box">
+            <div class="article-textbox">
+              <div>
+                <h3 class="h4">HTTP vs HTTPS: Securing Web Communications</h3>
+                <div class="article-text">
+                  Explore the differences between HTTP and HTTPS, understand
+                  SSL/TLS encryption, and learn why secure connections are
+                  crucial for modern web applications.
+                </div>
+              </div>
+              <div class="article-info">
+                <span class="reaction-count">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/heart-outline.svg"
+                    alt="heart"
+                  />
+                  200
+                </span>
+                <a
+                  href="https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig"
+                  class="link"
+                  target="_blank"
+                  rel="noopener"
+                  >Continue reading</a
+                >
+              </div>
+            </div>
+          </article>
         </div>
-        
-      </section>
+      </div>
+    </section>
 
-      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
-
-      <section class="article">
+    <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+    <main>
+      <section class="learning-journey">
         <div class="container">
-          <h2 class="h2" id="blog">Shared Articles</h2>
-          <div class="article-boxes">
-            <article class="article-box featured-article">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h3">
-                    22 Useful CSS Tips and Tricks Every Developer Should Know
-                  </h3>
-                  <p class="article-text">
-                    Note: All the tips, tricks shared in this article are part
-                    of my GitHub repository css tips tricks A handmade
-                    collection of pro css tips tricks for developers.
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin/22-useful-css-tips-and-tricks-every-developer-should-know-13c6" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img src="./assets/images/heart-outline.svg" alt="heart" />
-                    416
-                  </span>
-                </div>
-              </div>
-              <picture class="article-illustration">
-                <img
-                  src="assets/images/featured-blog.webp"
-                  alt="MacBook Pro"
-                  loading="lazy"
-                />
-              </picture>
-            </article>
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">JavaScript Default Function Parameters.</h3>
-                  <p class="article-text">
-                    In JavaScript when we call a function which expects some
-                    data to be passed in if you call that without passing
-                  </p>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin/javascript-default-function-parameters-1i8j" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                      loading="lazy"
-                    />
-                    47
-                  </span>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-box">
-              <div class="article-textbox">
-                <div>
-                  <h3 class="h4">HTML tips and tricks.</h3>
-                  <div class="article-text">
-                    In my very last article I shared some JavaScript tips and
-                    tricks In this article I will be covering HTML tips and
-                    tricks.
-                  </div>
-                </div>
-                <div class="article-info">
-                  <a href="https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig" class="link" target="_blank" rel="noopener"
-                    >Continue reading</a
-                  >
-                  <span class="reaction-count">
-                    <img
-                      loading="lazy"
-                      src="./assets/images/heart-outline.svg"
-                      alt="heart"
-                    />
-                    350
-                  </span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
-
-      <section class="skills">
-        <div class="container">
-          <h2 class="h2" id="skills">My Toolkit</h2>
-          <div class="skills-imgs">
-                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
-                <!-- <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte"> -->
-                <!-- <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript"> -->
-                <!-- <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility"> -->
-                <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
-                <!-- <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS"> -->
-                <!-- <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL"> -->
-                <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
-                <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
-                <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
-                <img src="assets/images/skills/java (2).png" alt="Jave" class="skills-img" loading="lazy" title="Java">
-                <img src="assets/images/skills/springboot.png" alt="Spring" class="skills-img" loading="lazy" title="SpringBoot">
-                <img src="assets/images/skills/Microsoft_SQL_Server.png" alt="SQLServer" class="skills-img" loading="lazy" title="SQLServer">
-                <img src="assets/images/skills/csharp.png" alt="C#" class="skills-img" loading="lazy" title="C#">
-
-            </figure>
+          <h2 class="h2" id="journey">My Learning Journey</h2>
+          <div class="journey-timeline">
+            <div class="journey-item">
+              <h3>Started with Programming Basics</h3>
+              <p>
+                Learned Python fundamentals, data structures, and algorithms
+                through online courses and personal projects.
+              </p>
+            </div>
+            <div class="journey-item">
+              <h3>Dived into Networking</h3>
+              <p>
+                Explored TCP/IP protocols, socket programming, and network
+                security concepts.
+              </p>
+            </div>
+            <div class="journey-item">
+              <h3>Web Development</h3>
+              <p>
+                Built full-stack applications using HTML, CSS, JavaScript, and
+                backend technologies.
+              </p>
+            </div>
+            <div class="journey-item">
+              <h3>Continuous Learning</h3>
+              <p>
+                Currently focusing on advanced networking topics and
+                contributing to open-source projects.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -567,7 +678,7 @@ with hands-on experience in building scalable and efficient web applications. He
         </div>
       </section> -->
 
-      <section class="contact">
+      <section class="contact" style="background: linear-gradient(135deg, rgba(0, 255, 166, 0.1) 0%, var(--bg-color-secondary) 100%); padding: var(--gutter-x-large) 0; border-radius: var(--radius); margin: var(--gutter-large) 0;">
         <div class="container">
           <h2 class="h2" id="contact">Send Message</h2>
           <div class="contact-content">
@@ -591,7 +702,11 @@ with hands-on experience in building scalable and efficient web applications. He
                 loading="lazy"
               />
             </div>
-            <form action="https://formspree.io/f/mkgrkpdq" method="POST" class="contact-form">
+            <form
+              action="https://formspree.io/f/mkgrkpdq"
+              method="POST"
+              class="contact-form"
+            >
               <div class="form-field">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" required />
@@ -624,13 +739,17 @@ with hands-on experience in building scalable and efficient web applications. He
           <nav>
             <ol class="footer-links">
               <li class="footer-link">
-                <a title="GitHub" href="https://github.com/iLuminase" target="_blank" rel="noopener"
+                <a
+                  title="GitHub"
+                  href="https://github.com/iLuminase"
+                  target="_blank"
+                  rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/github.svg"
                     alt="GitHub"
                 /></a>
-              <!-- </li>
+                <!-- </li>
               <li class="footer-link">
                 <a title="Codepen" href="https://github.com/iLuminase" target="_blank" rel="noopener"
                   ><img
@@ -639,23 +758,34 @@ with hands-on experience in building scalable and efficient web applications. He
                     alt="Codepen"
                 /></a>
               </li> -->
+              </li>
+
               <li class="footer-link">
-                <a title="Linkedin" href="https://www.linkedin.com/in/nt-phat-softdev/" target="_blank" rel="noopener"
+                <a
+                  title="Linkedin"
+                  href="https://www.linkedin.com/in/nt-phat-softdev/"
+                  target="_blank"
+                  rel="noopener"
                   ><img
                     loading="lazy"
                     src="assets/images/social-links/linkedin.svg"
                     alt="Linkedin"
                 /></a>
               </li>
-      
             </ol>
           </nav>
           <p class="footer-text">
-            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/devsyedmohsin">Syed Mohsin.</a>
+            &copy; <span>2024</span> - Template designed & developed by
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/devsyedmohsin"
+              >Syed Mohsin.</a
+            >
           </p>
           <label class="theme-switch" for="theme-switch">
             <span>Dark Theme</span>
-            <input type="checkbox" id="theme-switch" role="switch"/>
+            <input type="checkbox" id="theme-switch" role="switch" />
           </label>
         </div>
       </div>

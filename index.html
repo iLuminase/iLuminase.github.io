@@ -124,7 +124,7 @@ with hands-on experience in building scalable and efficient web applications. He
           <li class="nav-item"><a href="#">Home</a></li>
           <li class="nav-item"><a href="#skills">Skills</a></li>
           <li class="nav-item"><a href="#work">My Work</a></li>
-          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="pages/blog-list.html">Blog</a></li>
           <li class="nav-item"><a href="#journey">My Journey</a></li>
           <li class="nav-item">
             <a href="#contact" data-focused="last-focused">Contact</a>
@@ -136,7 +136,8 @@ with hands-on experience in building scalable and efficient web applications. He
         <div class="header-textbox">
           <!-- Replace with your name and job title -->
           <h1 class="h1">
-            <span>Hi, I'm Nguyen Tien Phat</span>
+            <span>Hi,</span>
+            <span> I'm Nguyen Tien Phat</span>
             <span>Networking & Programming Enthusiast</span>
           </h1>
           <!-- Add a small introductory paragraph about yourself -->
@@ -416,104 +417,61 @@ We are excited to announce the launch of NhaKhoa3B — our comprehensive web-bas
       </div>
     </section>
 
-    <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+
 
     <section class="article" style="background: linear-gradient(135deg, var(--bg-color-secondary) 0%, rgba(255, 131, 139, 0.1) 100%); padding: var(--gutter-x-large) 0; border-radius: var(--radius); margin: var(--gutter-large) 0;">
       <div class="container">
         <h2 class="h2" id="blog">Shared Articles</h2>
         <div class="article-boxes">
+          <!-- Placeholder articles - content will be loaded dynamically from posts.json -->
           <article class="article-box featured-article">
             <div class="article-textbox">
               <div>
-                <h3 class="h3">Understanding the TCP/IP Protocol Suite</h3>
-                <p class="article-text">
-                  Dive deep into the layers of the TCP/IP model, from physical
-                  to application layer. This comprehensive guide explains how
-                  data travels across networks, with practical examples and
-                  diagrams to make complex concepts accessible.
-                </p>
+                <h3 class="h3">Loading...</h3>
+                <p class="article-text">Loading article content...</p>
               </div>
               <div class="article-info">
                 <span class="reaction-count">
                   <img src="./assets/images/heart-outline.svg" alt="heart" />
-                  150
+                  0
                 </span>
-                <a
-                  href="https://dev.to/devsyedmohsin/22-useful-css-tips-and-tricks-every-developer-should-know-13c6"
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  >Continue reading</a
-                >
+                <a href="#" class="link">Continue reading</a>
               </div>
             </div>
             <picture class="article-illustration">
-              <img
-                src="assets/images/featured-blog.webp"
-                alt="MacBook Pro"
-                loading="lazy"
-              />
+              <img src="assets/images/blog-imgs/blog-placeholder-2.svg" alt="Loading" loading="lazy" />
             </picture>
           </article>
           <article class="article-box">
             <div class="article-textbox">
               <div>
-                <h3 class="h4">
-                  Socket Programming in Python: A Beginner's Guide
-                </h3>
-                <p class="article-text">
-                  Learn the basics of socket programming with Python. This
-                  tutorial covers creating client-server applications, handling
-                  connections, and understanding network communication
-                  fundamentals.
-                </p>
+                <h3 class="h3">Loading...</h3>
+                <p class="article-text">Loading article content...</p>
               </div>
               <div class="article-info">
                 <span class="reaction-count">
-                  <img
-                    src="./assets/images/heart-outline.svg"
-                    alt="heart"
-                    loading="lazy"
-                  />
-                  75
+                  <img src="./assets/images/heart-outline.svg" alt="heart" loading="lazy" />
+                  0
                 </span>
-                <a
-                  href="https://dev.to/devsyedmohsin/javascript-default-function-parameters-1i8j"
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  >Continue reading</a
-                >
+                <a href="#" class="link">Continue reading</a>
               </div>
             </div>
+            <picture class="article-illustration">
+              <img src="assets/images/blog-imgs/blog-placeholder-2.svg" alt="Loading" loading="lazy" />
+            </picture>
           </article>
-
           <article class="article-box">
             <div class="article-textbox">
               <div>
-                <h3 class="h4">HTTP vs HTTPS: Securing Web Communications</h3>
-                <div class="article-text">
-                  Explore the differences between HTTP and HTTPS, understand
-                  SSL/TLS encryption, and learn why secure connections are
-                  crucial for modern web applications.
-                </div>
+                <h3 class="h3">Loading...</h3>
+                <p class="article-text">Loading article content...</p>
               </div>
               <div class="article-info">
                 <span class="reaction-count">
-                  <img
-                    loading="lazy"
-                    src="./assets/images/heart-outline.svg"
-                    alt="heart"
-                  />
-                  200
+                  <img loading="lazy" src="./assets/images/heart-outline.svg" alt="heart" />
+                  0
                 </span>
-                <a
-                  href="https://dev.to/devsyedmohsin/html-tips-tricks-that-you-will-love-to-know-27ig"
-                  class="link"
-                  target="_blank"
-                  rel="noopener"
-                  >Continue reading</a
-                >
+                <a href="#" class="link">Continue reading</a>
               </div>
             </div>
           </article>
@@ -530,16 +488,19 @@ We are excited to announce the launch of NhaKhoa3B — our comprehensive web-bas
             <div class="journey-item">
               <h3>Started with Programming Basics</h3>
               <p>
-                Learned Python fundamentals, data structures, and algorithms
-                through online courses and personal projects.
+                Learned C/C++ fundamentals, data structures, and algorithms
+                at the University and online courses.
               </p>
+              <h4>2020-2021</h4>
             </div>
+            
             <div class="journey-item">
               <h3>Dived into Networking</h3>
               <p>
                 Explored TCP/IP protocols, socket programming, and network
                 security concepts.
               </p>
+              <h4>2021-2022</h4>
             </div>
             <div class="journey-item">
               <h3>Web Development</h3>
@@ -547,6 +508,7 @@ We are excited to announce the launch of NhaKhoa3B — our comprehensive web-bas
                 Built full-stack applications using HTML, CSS, JavaScript, and
                 backend technologies.
               </p>
+              <h4>2022-2023</h4>
             </div>
             <div class="journey-item">
               <h3>Continuous Learning</h3>
@@ -554,130 +516,13 @@ We are excited to announce the launch of NhaKhoa3B — our comprehensive web-bas
                 Currently focusing on advanced networking topics and
                 contributing to open-source projects.
               </p>
+              <h4>2023-Present</h4>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
-
-      <!-- <section>
-        <h2 class="h2">Testimonials</h2>
-        <div class="container">
-          <ol class="testimonials">
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Working with Syed was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/rich-harris.png"
-                  alt="Rich Harris"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Harris Kareem</h3>
-                  <p class="testimonial-author-job">Developer @Outlets</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Syed is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/frank-mcsherry.webp"
-                  alt="Andrew Mead"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">
-                   Andrew Mead
-                  </h3>
-                  <p class="testimonial-author-job">Chief Scientist @Logos
-                  </p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-             
-                Talented artist, experienced with various
-                media and can make any project you are working on look good. He is
-                easy to work with and is a self starter. I would work with Syed
-                again.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/brian-hirsh.png"
-                  alt="Brian Hirsh"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
-                  <p class="testimonial-author-job">Head @Zero-in</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Syed is a true professional with amazing talent. He is a creative
-                thinker, has his finger on the pulse of whats to come, and
-                absolutely one of the quickest and best problem solvers I have
-                ever met.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/adam.png"
-                  alt="Adam Argalye"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Adam Argalye</h3>
-                  <p class="testimonial-author-job">SWE @Google</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-               Syed is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because she understands how to tackle unknown problems with gumption. 
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/val-head.png"
-                  alt="Val Head"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Val Head</h3>
-                  <p class="testimonial-author-job">CEO @Engines</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="testimonial">
-              <blockquote class="testimonial-text">
-                Syed is a talented artist. He is very experienced with various
-                media and can make any project you are working on look good. He is
-                easy to work with and is a self starter. I would work with Syed
-                again.
-              </blockquote>
-              <figure class="testimonial-author">
-                <img
-                  src="assets/images/testimonials/tim-satterwhite.webp"
-                  alt="Gary Simon"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <h3 class="testimonial-author-name">Gary Simon</h3>
-                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ol>
-        </div>
-      </section> -->
-
+    
       <section class="contact" style="background: linear-gradient(135deg, rgba(0, 255, 166, 0.1) 0%, var(--bg-color-secondary) 100%); padding: var(--gutter-x-large) 0; border-radius: var(--radius); margin: var(--gutter-large) 0;">
         <div class="container">
           <h2 class="h2" id="contact">Send Message</h2>
@@ -696,8 +541,8 @@ We are excited to announce the launch of NhaKhoa3B — our comprehensive web-bas
               </p>
               <!-- Replace src with your signatures and name -->
               <img
-                src="assets/images/signatures.png"
-                alt="Syed Mohsin"
+                src="assets/images/signature.png"
+                alt="Tien Phat"
                 class="signatures"
                 loading="lazy"
               />

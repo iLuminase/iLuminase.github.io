@@ -113,6 +113,82 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 
 yearEl.textContent = new Date().getFullYear();
 
+// --- Helper function to get first image from a blog post ---
+async function getFirstImageFromPost(slug) {
+  try {
+    const response = await fetch(`/pages/${slug}`);
+    if (!response.ok) return null;
+
+    const html = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, "text/html");
+
+    // Find first img element in the blog article
+    const firstImg = doc.querySelector(".blog-article img");
+    if (firstImg && firstImg.src) {
+      // Convert relative URL to absolute path for homepage
+      return firstImg.src.replace(window.location.origin, "");
+    }
+  } catch (error) {
+    console.warn("Failed to get first image from post:", slug, error);
+  }
+  return null;
+}
+
+// --- Homepage posts loader: fetch pages/data/posts.json and populate article-boxes ---
+(async function loadHomepagePosts() {
+  const container = document.querySelector(".article-boxes");
+  if (!container) return; // not on homepage
+
+  try {
+    const res = await fetch("/pages/data/posts.json");
+    if (!res.ok) throw new Error("Failed to load posts.json");
+    let posts = await res.json();
+
+    // For each post without image, try to get first image from the post
+    for (let post of posts) {
+      if (!post.image && post.slug && post.slug !== "#") {
+        post.image = await getFirstImageFromPost(post.slug);
+      }
+    }
+
+    container.innerHTML = posts
+      .map(
+        (p) => `
+      <article class="article-box">
+        <div class="article-textbox">
+          <div>
+            <h3 class="h3">${p.title}</h3>
+            <p class="article-text">${p.excerpt}</p>
+          </div>
+          <div class="article-info">
+            <span class="reaction-count">
+              <img src="./assets/images/heart-outline.svg" alt="heart" />
+              ${p.likes || 0}
+            </span>
+            <a href="/pages/${
+              p.slug
+            }" class="link" target="_blank" rel="noopener">Continue reading</a>
+          </div>
+        </div>
+        <picture class="article-illustration">
+          ${
+            p.image
+              ? `<img src="${p.image.replace("../", "/")}" alt="${
+                  p.title
+                }" loading="lazy" />`
+              : ""
+          }
+        </picture>
+      </article>
+    `
+      )
+      .join("\n");
+  } catch (err) {
+    console.warn("Homepage posts loader:", err);
+  }
+})();
+
 // Gallery functionality
 document.querySelectorAll(".work-gallery").forEach((gallery) => {
   const images = gallery.querySelectorAll(".gallery-img");
@@ -143,7 +219,7 @@ document.querySelectorAll(".work-gallery").forEach((gallery) => {
   let autoPlayInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
-  }, 6000); // Change image every 6 seconds
+  }, 3000); // Change image every 3 seconds
 
   // Pause auto-play on hover
   gallery.addEventListener("mouseenter", () => {

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog - iLuminase</title>
+    <meta
+      name="description"
+      content="Blog cá nhân về lập trình, công nghệ và phát triển phần mềm."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="blog-styles.css" />
+    <script src="blog-script.js" defer></script>
+  </head>
+  <body>
+    <div class="menu-btn-container">
+      <div class="container">
+        <a href="/index.html" class="back-link">← Back</a>
+        <button type="button" class="menu-btn">menu</button>
+      </div>
+    </div>
+
+    <nav class="nav hidden">
+      <ol class="nav-items">
+        <li class="nav-item"><a href="/index.html">Home</a></li>
+        <li class="nav-item"><a href="/index.html#skills">Skills</a></li>
+        <li class="nav-item"><a href="/index.html#work">My Work</a></li>
+        <li class="nav-item">
+          <a href="/pages/blog-list.html">Blog</a>
+        </li>
+        <li class="nav-item"><a href="/index.html#journey">My Journey</a></li>
+        <li class="nav-item">
+          <a href="/index.html#contact" data-focused="last-focused">Contact</a>
+        </li>
+      </ol>
+    </nav>
+
+    <header class="blog-header">
+      <nav class="container">
+        <!-- Back link moved to menu-btn-container -->
+      </nav>
+    </header>
+
+    <main>
+      <div class="blog-list">
+        <div class="container">
+          <h1>My Blog</h1>
+          <p class="blog-intro">
+            Chia sẻ kiến thức về lập trình, công nghệ và những trải nghiệm trong
+            quá trình phát triển phần mềm.
+          </p>
+
+          <div class="blog-posts">
+            <article class="blog-post-card">
+              <div class="post-content">
+                <h2>
+                  <a href="blog-understanding-tcp-ip-protocol-suite.html">
+                    Tìm hiểu về bộ giao thức TCP/IP
+                  </a>
+                </h2>
+                <p class="post-excerpt">
+                  TCP/IP (Transmission Control Protocol/Internet Protocol) là bộ
+                  giao thức nền tảng cho mạng Internet và hầu hết các mạng máy
+                  tính hiện đại. Việc hiểu rõ TCP/IP giúp chúng ta nắm được cách
+                  các thiết bị giao tiếp với nhau qua mạng.
+                </p>
+                <div class="post-meta">
+                  <time datetime="2024-01-15">15 tháng 1, 2024</time>
+                  <span class="post-category">Mạng máy tính</span>
+                </div>
+              </div>
+              <div class="post-image">
+                <img
+                  src="../assets/images/skills/html.webp"
+                  alt="TCP/IP Protocol"
+                />
+              </div>
+            </article>
+
+            <!-- Thêm các bài blog khác ở đây -->
+            <article class="blog-post-card">
+              <div class="post-content">
+                <h2>
+                  <a href="#">Sắp ra mắt...</a>
+                </h2>
+                <p class="post-excerpt">
+                  Bài viết mới đang được chuẩn bị. Hãy theo dõi để cập nhật
+                  những nội dung thú vị về lập trình và công nghệ!
+                </p>
+                <div class="post-meta">
+                  <time datetime="2024-12-31">Sắp tới</time>
+                  <span class="post-category">Coming Soon</span>
+                </div>
+              </div>
+              <div class="post-image">
+                <img src="../assets/images/skills/js.webp" alt="Coming Soon" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <footer class="blog-footer">
+        <div class="container">
+          <div
+            style="
+              text-align: center;
+              margin-top: var(--gutter-large);
+              padding-top: var(--gutter-large);
+              border-top: 1px solid var(--border);
+            "
+          >
+            <label class="theme-switch" for="theme-switch">
+              <span>Dark Theme</span>
+              <input type="checkbox" id="theme-switch" role="switch" />
+            </label>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

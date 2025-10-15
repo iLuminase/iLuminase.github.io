@@ -1,8 +1,18 @@
 [
   {
+    "id": "web-crawler-tutorial",
+    "title": "Web Crawler: Hướng dẫn từ lý thuyết đến thực hành",
+    "date": "2025-10-15",
+    "excerpt": "Tìm hiểu về Web Crawler - công cụ thu thập dữ liệu web tự động. Từ lý thuyết cơ bản đến code Java thực tế để xây dựng web crawler.",
+    "slug": "blog-web-crawler-tutorial.html",
+    "category": "Programming",
+    "image": "",
+    "likes": 0
+  },
+  {
     "id": "tcp-ip",
     "title": "Tìm hiểu về bộ giao thức TCP/IP",
-    "date": "2024-01-15",
+    "date": "2025-01-15",
     "excerpt": "TCP/IP (Transmission Control Protocol/Internet Protocol) là bộ giao thức nền tảng cho mạng Internet...",
     "slug": "blog-understanding-tcp-ip-protocol-suite.html",
     "category": "Mạng máy tính",
@@ -12,7 +22,7 @@
   {
     "id": "socket-python",
     "title": "Socket Programming in Python: A Beginner's Guide",
-    "date": "2024-05-10",
+    "date": "2025-05-10",
     "excerpt": "Learn the basics of socket programming with Python. This tutorial covers creating client-server applications...",
     "slug": "#",
     "category": "Programming",

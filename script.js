@@ -63,7 +63,8 @@ workEls.forEach((workEl) => {
 const switchThemeEl = document.querySelector('input[type="checkbox"]');
 const storedTheme = localStorage.getItem("theme");
 
-switchThemeEl.checked = storedTheme === "dark" || storedTheme === null;
+// Default to light theme (unchecked)
+switchThemeEl.checked = storedTheme === "dark";
 
 switchThemeEl.addEventListener("click", () => {
   const isChecked = switchThemeEl.checked;
@@ -72,11 +73,51 @@ switchThemeEl.addEventListener("click", () => {
     document.body.classList.remove("dark");
     document.body.classList.add("light");
     localStorage.setItem("theme", "light");
-    switchThemeEl.checked = false;
   } else {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
     localStorage.setItem("theme", "dark");
+  }
+
+  // Update FAB icon
+  updateFABIcon();
+});
+
+// Function to update FAB icon based on current theme
+function updateFABIcon() {
+  const fabIcon = document.querySelector(".theme-icon");
+  if (fabIcon) {
+    if (document.body.classList.contains("dark")) {
+      fabIcon.textContent = "☀️";
+    } else {
+      fabIcon.textContent = "🌙";
+    }
+  }
+}
+
+// Initialize FAB icon on page load
+document.addEventListener("DOMContentLoaded", function() {
+  updateFABIcon();
+
+  // Add FAB button event listener
+  const fabButton = document.getElementById("theme-toggle");
+  if (fabButton) {
+    fabButton.addEventListener("click", function() {
+      // Toggle theme
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+
+      const currentTheme = document.body.classList.contains("dark") ? "dark" : "light";
+      localStorage.setItem("theme", currentTheme);
+
+      // Update checkbox state
+      if (switchThemeEl) {
+        switchThemeEl.checked = currentTheme === "dark";
+      }
+
+      // Update FAB icon
+      updateFABIcon();
+    });
   }
 });
 

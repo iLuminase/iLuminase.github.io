@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Crawler: Hướng dẫn từ lý thuyết đến thực hành</title>
+    <meta name="description"
+        content="Tìm hiểu về Web Crawler - công cụ thu thập dữ liệu web tự động. Từ lý thuyết cơ bản đến code Java thực tế để xây dựng web crawler." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="blog-styles.css" />
+    <script src="blog-script.js" defer></script>
+    <!-- ...existing code... -->
+</head>
+
+<body>
+    <!-- Blog Header Component -->
+    <div class="blog-header-placeholder"></div>
+
+    <!-- Floating Action Button for Theme Toggle -->
+    <div class="fab">
+        <button class="fab-icon" id="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <main>
+        <article class="blog-article">
+            <h1>Web Crawler: Hướng dẫn từ lý thuyết đến thực hành</h1>
+
+            <p>
+                Web Crawler (còn gọi là Web Spider hoặc Web Robot) là một chương trình
+                máy tính được thiết kế để tự động duyệt và thu thập thông tin từ các
+                trang web trên Internet. Đây là công cụ quan trọng trong việc xây dựng
+                các công cụ tìm kiếm, phân tích dữ liệu web, và nhiều ứng dụng khác.
+            </p>
+
+            <h2>1. Web Crawler là gì?</h2>
+
+            <p>
+                Web Crawler là một chương trình tự động
+                duyệt qua các trang web và thu thập thông tin. Nó hoạt động bằng cách
+                bắt đầu từ một URL cụ thể, tải nội dung trang web đó, sau đó phân tích
+                các liên kết trong trang và tiếp tục duyệt đến các trang liên kết đó.
+            </p>
+
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/web-crawler-diagram.svg" alt="Sơ đồ hoạt động của Web Crawler"
+                    loading="lazy" />
+                <figcaption>Sơ đồ hoạt động cơ bản của Web Crawler</figcaption>
+            </figure>
+
+            <h2>2. Nguyên lý hoạt động của Web Crawler</h2>
+
+            <h3>2.1. Cơ chế hoạt động cơ bản</h3>
+            <ul>
+                <li>
+                    <strong>Bắt đầu từ URL gốc:</strong> Web Crawler nhận một URL ban đầu
+                    để bắt đầu quá trình thu thập dữ liệu.
+                </li>
+                <li>
+                    <strong>Tải nội dung trang:</strong> Sử dụng HTTP requests để tải HTML
+                    của trang web.
+                </li>
+                <li>
+                    <strong>Phân tích nội dung:</strong> Parse HTML để tìm các liên kết
+                    (href attributes trong thẻ &lt;a&gt;).
+                </li>
+                <li>
+                    <strong>Lọc và chuẩn hóa URL:</strong> Loại bỏ các URL không hợp lệ
+                    và chuẩn hóa thành URL tuyệt đối.
+                </li>
+                <li>
+                    <strong>Lặp lại quá trình:</strong> Tiếp tục với các URL mới được tìm thấy.
+                </li>
+            </ul>
+
+            <h3>2.2. Các thành phần chính</h3>
+            <ul>
+                <li><strong>HTTP Client:</strong> Thực hiện các HTTP requests</li>
+                <li><strong>HTML Parser:</strong> Phân tích nội dung HTML</li>
+                <li><strong>URL Queue:</strong> Lưu trữ các URL chờ xử lý</li>
+                <li><strong>Visited URLs Set:</strong> Theo dõi các URL đã duyệt</li>
+                <li><strong>Data Storage:</strong> Lưu trữ dữ liệu thu thập được</li>
+            </ul>
+
+            <h2>3. Ứng dụng của Web Crawler</h2>
+
+            <ul>
+                <li>
+                    <strong>Công cụ tìm kiếm:</strong> Google, Bing sử dụng crawler để
+                    index các trang web.
+                </li>
+                <li>
+                    <strong>Phân tích dữ liệu:</strong> Thu thập dữ liệu cho nghiên cứu
+                    thị trường, phân tích cạnh tranh.
+                </li>
+                <li>
+                    <strong>Monitor website:</strong> Theo dõi thay đổi nội dung,
+                    kiểm tra tính khả dụng.
+                </li>
+                <li>
+                    <strong>SEO Tools:</strong> Phân tích backlinks, kiểm tra cấu trúc website.
+                </li>
+                <li>
+                    <strong>Data Mining:</strong> Thu thập dữ liệu lớn từ web cho
+                    mục đích nghiên cứu.
+                </li>
+            </ul>
+
+            <h2>4. Thách thức khi xây dựng Web Crawler</h2>
+
+            <h3>4.1. Vấn đề kỹ thuật</h3>
+            <ul>
+                <li><strong>Rate Limiting:</strong> Tránh bị chặn bởi website</li>
+                <li><strong>User-Agent:</strong> Giả lập trình duyệt thật</li>
+                <li><strong>Robots.txt:</strong> Tuân thủ quy tắc của website</li>
+                <li><strong>Dynamic Content:</strong> Xử lý JavaScript rendering</li>
+                <li><strong>Duplicate Content:</strong> Tránh thu thập nội dung trùng lặp</li>
+            </ul>
+
+            <h3>4.2. Vấn đề pháp lý và đạo đức</h3>
+            <ul>
+                <li><strong>Terms of Service:</strong> Tuân thủ điều khoản sử dụng</li>
+                <li><strong>Copyright:</strong> Không vi phạm bản quyền</li>
+                <li><strong>Server Load:</strong> Không gây quá tải cho server</li>
+                <li><strong>Privacy:</strong> Bảo vệ thông tin cá nhân</li>
+            </ul>
+
+            <h2>5. Triển khai Web Crawler bằng Java</h2>
+
+            <p>
+                Dưới đây là một implementation đơn giản của Web Crawler sử dụng Java
+                với HttpClient API (từ Java 11+). Code này bao gồm các tính năng cơ bản:
+            </p>
+
+            <ul>
+                <li>Thu thập URL theo độ sâu (depth)</li>
+                <li>Xử lý HTTP redirects</li>
+                <li>User-Agent giả lập trình duyệt</li>
+                <li>Lọc và chuẩn hóa URL</li>
+                <li>Lưu kết quả ra file</li>
+            </ul>
+
+
+
+
+            <h3>5.1. Hướng dẫn setup và chạy</h3>
+
+            <h4>Yêu cầu hệ thống:</h4>
+            <ul>
+                <li><strong>Java:</strong> JDK 11 hoặc cao hơn</li>
+                <li><strong>IDE:</strong> IntelliJ IDEA, Eclipse, hoặc VS Code</li>
+            </ul>
+
+            <h4>Các bước setup:</h4>
+            <ul>
+                <li>1. Khởi tạo HttpClient</li>
+                <li>2. Hàm crawlWebsite() để bắt đầu tải nội dung HTML</li>
+                <li>3. Hàm fetchHtml() để tải nội dung HTML</li>
+                <li>4. Hàm getChildUrls() để trích xuất link</li>
+                <li>5. Hàm normalizeUrl() để chuẩn hóa link</li>
+                <li>6. Lưu kết quả ra file <strong>.txt</strong></li>
+            </ul>
+
+            <h2>6. Code</h2>
+            <h3>Bước 1: Khởi tạo HttpClient và danh sách visited</h3>
+            <p>
+                Đầu tiên, ta cần một HttpClient để gửi request và một HashSet để tránh truy cập trùng URL.
+            </p>
+
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b1.png" alt="httpClient Init" loading="lazy" />
+                <figcaption>Khởi tạo HttpClient</figcaption>
+            </figure>
+            <h3>Bước 2: Hàm crawlWebsite() để bắt đầu tải nội dung HTML</h3>
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b2.png" alt="crawl" loading="lazy" />
+                <figcaption>Hàm crawlWebsite</figcaption>
+            </figure>
+            <h3>Bước 3: Hàm đệ quy crawUrl()</h3>
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b3.png" alt="crawl" loading="lazy" />
+            </figure>
+            <p>Giải thích</p>
+            <ul>
+                <li>Dừng nếu URL đã duyệt rồi.</li>
+                <li>Gọi fetchHtml() để tải trang HTML</li>
+                <li>Nếu còn depth > 0 -> tiếp tục duyệt các link con (childUrls)</li>
+            </ul>
+
+            <h3>Bước 4: Tải nội dung HTML (fetchHtml)</h3>
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b4.png" alt="crawl" loading="lazy" />
+            </figure>
+            <p>💡 Điểm đáng chú ý:</p>
+            <ul>
+                <li>Thêm header "User-Agent" để tránh lỗi 403 Forbidden (một số website chặn bot).</li>
+                <li>Xử lý timeout để tránh treo chương trình.</li>
+                <li>Trả về nội dung HTML nếu status code = 200.</li>
+            </ul>
+
+            <h3>Bước 5: Trích xuất các link con (getChildUrls)</h3>
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b5.png" alt="crawl" loading="lazy" />
+            </figure>
+            <p>🔍 Giải thích:</p>
+            <ul>
+                <li>Sử dụng Regex để tìm thẻ (a)</li>
+                <li>Bỏ qua các liên kết không hợp lệ hoặc nội bộ (mailto, javascript...).</li>
+                <li>Chuẩn hóa đường dẫn tương đối → tuyệt đối bằng normalizeUrl.</li>
+            </ul>
+            <h3>Bước 6: Chuẩn hóa URL (normalizeUrl)</h3>
+            <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b6.png" alt="crawl" loading="lazy" />
+            </figure>
+
+            <h3>Bước 7: Lưu kết quả ra file .txt</h3>
+             <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/b7.png" alt="crawl" loading="lazy" />
+            </figure>
+
+            <h3>Bước 8: Hàm main chạy chương trình</h3>
+             <figure class="blog-image">
+                <img src="../assets/images/blog-imgs/crawler-b8.png" alt="crawl" loading="lazy" />
+            </figure>
+
+            <h2>6. Lưu ý khi sử dụng Web Crawler</h2>
+
+            <div class="warning-box">
+                <h4>⚠️ Lưu ý quan trọng:</h4>
+                <ul>
+                    <li>
+                        <strong>Tuân thủ robots.txt:</strong> Kiểm tra file robots.txt của
+                        website trước khi crawl.
+                    </li>
+                    <li>
+                        <strong>Rate limiting:</strong> Thêm delay giữa các requests để
+                        tránh quá tải server.
+                    </li>
+                    <li>
+                        <strong>Legal compliance:</strong> Đảm bảo việc crawl không vi phạm
+                        điều khoản sử dụng của website.
+                    </li>
+                    <li>
+                        <strong>Resource usage:</strong> Crawler có thể tiêu tốn nhiều băng
+                        thông và tài nguyên.
+                    </li>
+                </ul>
+            </div>
+
+            <h2>7. Kết luận</h2>
+
+            <p>
+                Web Crawler là một công cụ mạnh mẽ cho việc thu thập và phân tích dữ
+                liệu web. Từ lý thuyết cơ bản về cách hoạt động đến implementation thực
+                tế bằng Java, chúng ta đã thấy được cả hai mặt của công nghệ này.
+            </p>
+
+            <p>
+                Khi xây dựng Web Crawler, cần cân nhắc giữa hiệu quả kỹ thuật và
+                trách nhiệm đạo đức. Việc sử dụng crawler một cách có trách nhiệm sẽ
+                giúp chúng ta khai thác tối đa tiềm năng của dữ liệu web trong khi
+                vẫn tôn trọng quyền lợi của các bên liên quan.
+            </p>
+
+            <p>
+                Code Java được cung cấp là một điểm khởi đầu tốt để bạn có thể phát
+                triển thêm các tính năng nâng cao như xử lý JavaScript, lưu trữ cơ sở
+                dữ liệu, hoặc giao diện người dùng.
+            </p>
+
+            <h2>8. Tải Source Code</h2>
+
+            <div class="download-section">
+                <p>
+                    Bạn có thể tải toàn bộ source code Java Web Crawler để tự mình
+                    thử nghiệm và phát triển thêm:
+                </p>
+
+                <div class="download-card">
+                    <h3>📁 Webcrawler_403_Fix_Source.rar</h3>
+                    <p class="download-description">
+                        Chứa source code Java hoàn chỉnh với các tính năng:
+                    </p>
+                    <ul class="download-features">
+                        <li>Thu thập URL theo độ sâu</li>
+                        <li>Xử lý HTTP redirects</li>
+                        <li>User-Agent giả lập trình duyệt</li>
+                        <li>Lọc và chuẩn hóa URL</li>
+                        <li>Lưu kết quả ra file</li>
+                    </ul>
+
+                    <a href="../assets/src.rar" class="download-btn" download>
+                        <span>⬇️</span>
+                        Tải Source Code
+                    </a>
+                </div>
+
+                <div class="requirements-box">
+                    <h4>📋 Yêu cầu hệ thống:</h4>
+                    <ul>
+                        <li><strong>Java:</strong> JDK 11 hoặc cao hơn</li>
+                        <li><strong>IDE:</strong> IntelliJ IDEA, Eclipse, hoặc VS Code</li>
+                        <li><strong>Internet:</strong> Để test crawler</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Blog Footer -->
+        <footer class="blog-footer">
+            <div class="container">
+                <div class="interaction-section">
+                    <div class="interaction-buttons">
+                        <button class="interaction-btn" id="like-btn">
+                            <span>❤️</span>
+                            <span>Like</span>
+                            <span class="like-count" id="like-count">0</span>
+                        </button>
+                        <button class="interaction-btn" id="share-btn">
+                            <span>📤</span>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="comments-section">
+                    <h3>Comments</h3>
+
+                    <form class="comment-form" id="comment-form">
+                        <div class="form-group">
+                            <label for="comment-name">Name</label>
+                            <input type="text" id="comment-name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-text">Comment</label>
+                            <textarea id="comment-text" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Post Comment</button>
+                        <!-- Disqus Script to post / storage comments -->
+                        <script>
+                            (function () {
+                                var d = document,
+                                    s = d.createElement("script");
+                                s.src = "https://phatdevio.disqus.com/embed.js";
+                                s.setAttribute("data-timestamp", +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                    </form>
+
+                    <div class="comments-list" id="comments-list">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+
+                <div
+                    style="
+                        text-align: center;
+                        margin-top: var(--gutter-large);
+                        padding-top: var(--gutter-large);
+                        border-top: 1px solid var(--border);
+                    "
+                >
+                    <label class="theme-switch" for="theme-switch">
+                        <span>Dark Theme</span>
+                        <input type="checkbox" id="theme-switch" role="switch" />
+                    </label>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>

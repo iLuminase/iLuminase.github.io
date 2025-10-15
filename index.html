@@ -108,7 +108,8 @@ with hands-on experience in building scalable and efficient web applications. He
 
   <body>
     <script>
-      const theme = localStorage.getItem("theme") || "dark";
+      // Set default theme to light
+      const theme = localStorage.getItem("theme") || "light";
       document.body.classList.add(theme);
     </script>
 
@@ -131,6 +132,12 @@ with hands-on experience in building scalable and efficient web applications. He
           </li>
         </ol>
       </nav>
+      <!-- floating button -->
+      <div class="fab">
+        <button class="fab-icon" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
 
       <div class="container">
         <div class="header-textbox">

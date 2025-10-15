@@ -1743,3 +1743,136 @@ figure {
   font-weight: 600;
   color: var(--important);
 }
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.fab-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: var(--important);
+  color: var(--bg-color-primary);
+  border: none;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fab-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Download Section Styles */
+.download-section {
+  margin-top: var(--gutter-large);
+  padding: var(--gutter-large);
+  background: linear-gradient(
+    135deg,
+    var(--bg-color-secondary) 0%,
+    var(--bg-color-primary) 100%
+  );
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.download-card {
+  background: var(--bg-color-primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--gutter-medium);
+  margin: var(--gutter-medium) 0;
+  box-shadow: var(--shadow);
+}
+
+.download-card h3 {
+  color: var(--important);
+  margin-bottom: var(--gutter-small);
+  font-size: var(--h4);
+}
+
+.download-description {
+  color: var(--body);
+  margin-bottom: var(--gutter-small);
+}
+
+.download-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--gutter-medium);
+}
+
+.download-features li {
+  color: var(--sub);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.download-features li:last-child {
+  border-bottom: none;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: var(--text-small);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+  background: linear-gradient(135deg, #45a049, #4caf50);
+}
+
+.requirements-box {
+  background: var(--bg-color-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--gutter-medium);
+  margin-top: var(--gutter-medium);
+}
+
+.requirements-box h4 {
+  color: var(--important);
+  margin-bottom: var(--gutter-small);
+  font-size: var(--text-medium);
+}
+
+.requirements-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.requirements-box li {
+  color: var(--sub);
+  padding: 0.25rem 0;
+  font-size: var(--text-small);
+}
+
+.requirements-box strong {
+  color: var(--important);
+}

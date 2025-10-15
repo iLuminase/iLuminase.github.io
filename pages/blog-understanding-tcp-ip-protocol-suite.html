@@ -14,33 +14,9 @@
     <!-- ...existing code... -->
   </head>
   <body>
-    <div class="menu-btn-container">
-      <div class="container">
-        <a href="/pages/blog-list.html" class="back-link">← Back</a>
-        <button type="button" class="menu-btn">menu</button>
-      </div>
-    </div>
+    <!-- Blog Header Component -->
+    <div class="blog-header-placeholder"></div>
 
-    <nav class="nav hidden">
-      <ol class="nav-items">
-        <li class="nav-item"><a href="/index.html">Home</a></li>
-        <li class="nav-item"><a href="/index.html#skills">Skills</a></li>
-        <li class="nav-item"><a href="/index.html#work">My Work</a></li>
-        <li class="nav-item">
-          <a href="/pages/blog-list.html">Blog</a>
-        </li>
-        <li class="nav-item"><a href="/index.html#journey">My Journey</a></li>
-        <li class="nav-item">
-          <a href="/index.html#contact" data-focused="last-focused">Contact</a>
-        </li>
-      </ol>
-    </nav>
-
-    <header class="blog-header">
-      <nav class="container">
-        <!-- Back link moved to menu-btn-container -->
-      </nav>
-    </header>
     <main>
       <article class="blog-article">
         <h1>Tìm hiểu về bộ giao thức TCP/IP</h1>
@@ -178,67 +154,8 @@
         </p>
       </article>
 
-      <footer class="blog-footer">
-        <div class="container">
-          <div class="interaction-section">
-            <div class="interaction-buttons">
-              <button class="interaction-btn" id="like-btn">
-                <span>❤️</span>
-                <span>Like</span>
-                <span class="like-count" id="like-count">0</span>
-              </button>
-              <button class="interaction-btn" id="share-btn">
-                <span>📤</span>
-                <span>Share</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="comments-section">
-            <h3>Comments</h3>
-
-            <form class="comment-form" id="comment-form">
-              <div class="form-group">
-                <label for="comment-name">Name</label>
-                <input type="text" id="comment-name" required />
-              </div>
-              <div class="form-group">
-                <label for="comment-text">Comment</label>
-                <textarea id="comment-text" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Post Comment</button>
-              <!-- Disqus Script to post / storage comments -->
-              <script>
-                (function () {
-                  var d = document,
-                    s = d.createElement("script");
-                  s.src = "https://phatdevio.disqus.com/embed.js";
-                  s.setAttribute("data-timestamp", +new Date());
-                  (d.head || d.body).appendChild(s);
-                })();
-              </script>
-            </form>
-
-            <div class="comments-list" id="comments-list">
-              <!-- Comments will be loaded here -->
-            </div>
-          </div>
-
-          <div
-            style="
-              text-align: center;
-              margin-top: var(--gutter-large);
-              padding-top: var(--gutter-large);
-              border-top: 1px solid var(--border);
-            "
-          >
-            <label class="theme-switch" for="theme-switch">
-              <span>Dark Theme</span>
-              <input type="checkbox" id="theme-switch" role="switch" />
-            </label>
-          </div>
-        </div>
-      </footer>
+      <!-- Blog Footer Component -->
+      <div class="blog-footer-placeholder"></div>
     </main>
   </body>
 </html>

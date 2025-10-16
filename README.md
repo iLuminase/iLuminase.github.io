@@ -12,6 +12,12 @@
 
 A **comprehensive portfolio website** combining professional showcase with an **interactive blog platform**. Built with modern web technologies to demonstrate full-stack development skills while sharing technical knowledge about networking, programming, and software engineering.
 
+![alt text](hp2.png) ![alt text](hp1.png)
+
+## Skills Sections
+
+![alt text](hp3.png)
+
 ### 🎯 **Key Highlights**
 
 - **📚 Technical Blog** with interactive features (like, share, comment per post)

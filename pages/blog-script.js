@@ -82,14 +82,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 100); // Small delay to ensure components are loaded
 });
 
+// Function to get storage key for current blog post
+function getCommentStorageKey() {
+  // Extract the blog slug from current page URL
+  const pathParts = window.location.pathname.split("/");
+  const blogSlug = pathParts[pathParts.length - 1] || "default";
+  return `blog-comments-${blogSlug}`;
+}
+
 // Function to initialize comment functionality
 function initializeComments() {
   const commentForm = document.getElementById("comment-form");
   const commentsList = document.getElementById("comments-list");
 
   if (commentForm && commentsList) {
-    // Load existing comments
-    const comments = JSON.parse(localStorage.getItem("blog-comments") || "[]");
+    // Load existing comments for this blog post
+    const storageKey = getCommentStorageKey();
+    const comments = JSON.parse(localStorage.getItem(storageKey) || "[]");
     comments.forEach((comment) => addCommentToDOM(comment));
 
     commentForm.addEventListener("submit", function (e) {
@@ -108,7 +117,7 @@ function initializeComments() {
 
         // Save to localStorage
         comments.push(comment);
-        localStorage.setItem("blog-comments", JSON.stringify(comments));
+        localStorage.setItem(storageKey, JSON.stringify(comments));
 
         // Add to DOM
         addCommentToDOM(comment);
@@ -134,6 +143,23 @@ function addCommentToDOM(comment) {
   `;
   commentsList.appendChild(commentEl);
 }
+// Function to get likes from posts.json for current blog
+async function getPostLikesFromJSON() {
+  try {
+    const response = await fetch("/pages/data/posts.json");
+    if (!response.ok) return 0;
+
+    const posts = await response.json();
+    const currentSlug = window.location.pathname.split("/").pop();
+    const post = posts.find((p) => p.slug === currentSlug);
+
+    return post ? post.likes || 0 : 0;
+  } catch (error) {
+    console.error("Error fetching likes from JSON:", error);
+    return 0;
+  }
+}
+
 function initializeInteractionButtons() {
   // Get current page identifier (use pathname as unique key)
   const currentPage = window.location.pathname;
@@ -151,6 +177,17 @@ function initializeInteractionButtons() {
     // Load or initialize post interactions data
     let postData = loadPostInteractions(pageKey);
 
+    // Get initial likes from JSON if not yet set or if it's the first time
+    (async () => {
+      if (postData.likes === 0 && !postData.migrated) {
+        const jsonLikes = await getPostLikesFromJSON();
+        if (jsonLikes > 0) {
+          postData.likes = jsonLikes;
+          savePostInteractions(pageKey, postData);
+        }
+      }
+    })();
+
     // Update UI with current data
     likeCount.textContent = postData.likes;
     if (postData.isLiked) {
@@ -161,13 +198,13 @@ function initializeInteractionButtons() {
       if (isProcessing) return; // Prevent multiple rapid clicks
 
       isProcessing = true;
-      likeBtn.style.pointerEvents = 'none'; // Disable button temporarily
+      likeBtn.style.pointerEvents = "none"; // Disable button temporarily
 
       try {
         // Add visual feedback
-        likeBtn.style.transform = 'scale(0.95)';
+        likeBtn.style.transform = "scale(0.95)";
         setTimeout(() => {
-          likeBtn.style.transform = '';
+          likeBtn.style.transform = "";
         }, 150);
 
         // Toggle like status
@@ -195,7 +232,6 @@ function initializeInteractionButtons() {
         // Show feedback notification
         const action = postData.isLiked ? "Liked!" : "Unliked!";
         showNotification(action);
-
       } catch (error) {
         console.error("Error updating like:", error);
         showNotification("Error updating like. Please try again.");
@@ -203,34 +239,33 @@ function initializeInteractionButtons() {
         // Re-enable button after short delay
         setTimeout(() => {
           isProcessing = false;
-          likeBtn.style.pointerEvents = '';
+          likeBtn.style.pointerEvents = "";
         }, 300);
       }
     });
   }
 
-    // Share functionality with analytics
+  // Share functionality with analytics
   const shareBtn = document.getElementById("share-btn");
   if (shareBtn) {
-
     shareBtn.addEventListener("click", async function () {
       if (isSharing) return; // Prevent multiple share attempts
 
       isSharing = true;
-      shareBtn.style.pointerEvents = 'none';
+      shareBtn.style.pointerEvents = "none";
 
       try {
         // Visual feedback
-        shareBtn.style.transform = 'scale(0.95)';
+        shareBtn.style.transform = "scale(0.95)";
         setTimeout(() => {
-          shareBtn.style.transform = '';
+          shareBtn.style.transform = "";
         }, 150);
 
         const url = window.location.href;
         const title = document.title;
 
         // Track share attempt
-        trackShareInteraction(currentPage, 'attempt');
+        trackShareInteraction(currentPage, "attempt");
 
         if (navigator.share) {
           try {
@@ -239,10 +274,10 @@ function initializeInteractionButtons() {
               url: url,
             });
             // Track successful share
-            trackShareInteraction(currentPage, 'success');
+            trackShareInteraction(currentPage, "success");
             showNotification("Shared successfully!");
           } catch (err) {
-            if (err.name !== 'AbortError') {
+            if (err.name !== "AbortError") {
               console.log("Error sharing:", err);
               // Fallback to clipboard
               await fallbackShare(url);
@@ -259,7 +294,7 @@ function initializeInteractionButtons() {
         // Re-enable button
         setTimeout(() => {
           isSharing = false;
-          shareBtn.style.pointerEvents = '';
+          shareBtn.style.pointerEvents = "";
         }, 500);
       }
     });
@@ -286,7 +321,7 @@ function loadPostInteractions(pageKey) {
         shares: 0,
         lastInteraction: new Date().toISOString(),
         created: new Date().toISOString(),
-        migrated: true
+        migrated: true,
       };
 
       // Save migrated data
@@ -308,7 +343,7 @@ function loadPostInteractions(pageKey) {
     isLiked: false,
     shares: 0,
     lastInteraction: null,
-    created: new Date().toISOString()
+    created: new Date().toISOString(),
   };
 }
 
@@ -327,7 +362,7 @@ function trackShareInteraction(pageKey, action) {
   let shareData = {
     attempts: 0,
     successes: 0,
-    lastAttempt: null
+    lastAttempt: null,
   };
 
   try {
@@ -339,10 +374,10 @@ function trackShareInteraction(pageKey, action) {
     console.warn("Error loading share data:", error);
   }
 
-  if (action === 'attempt') {
+  if (action === "attempt") {
     shareData.attempts += 1;
     shareData.lastAttempt = new Date().toISOString();
-  } else if (action === 'success') {
+  } else if (action === "success") {
     shareData.successes += 1;
   }
 
@@ -359,7 +394,7 @@ async function fallbackShare(url) {
     await navigator.clipboard.writeText(url);
     showNotification("Link copied to clipboard!");
     // Track successful clipboard copy
-    trackShareInteraction(window.location.pathname, 'clipboard');
+    trackShareInteraction(window.location.pathname, "clipboard");
   } catch (error) {
     console.error("Failed to copy to clipboard:", error);
     showNotification("Unable to share. Please copy the URL manually.");
@@ -550,7 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(notification);
 
     setTimeout(() => {
-      notification.style.animation = 'slideOut 0.3s ease-in forwards';
+      notification.style.animation = "slideOut 0.3s ease-in forwards";
       setTimeout(() => {
         notification.remove();
       }, 300);
@@ -581,7 +616,7 @@ function showNotification(message) {
   document.body.appendChild(notification);
 
   setTimeout(() => {
-    notification.style.animation = 'slideOut 0.3s ease-in forwards';
+    notification.style.animation = "slideOut 0.3s ease-in forwards";
     setTimeout(() => {
       notification.remove();
     }, 300);
@@ -589,9 +624,9 @@ function showNotification(message) {
 }
 
 // Add notification animations to CSS if not already present
-if (!document.querySelector('#notification-styles')) {
-  const style = document.createElement('style');
-  style.id = 'notification-styles';
+if (!document.querySelector("#notification-styles")) {
+  const style = document.createElement("style");
+  style.id = "notification-styles";
   style.textContent = `
     @keyframes slideIn {
       from { transform: translateX(100%); opacity: 0; }
@@ -635,6 +670,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateFABIcon();
 
+  // Initialize floating action buttons
+  initializeFloatingButtons();
+
   // Add FAB button event listener
   const fabButton = document.getElementById("theme-toggle");
   if (fabButton) {
@@ -653,3 +691,111 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Function to initialize floating action buttons
+function initializeFloatingButtons() {
+  // Create FAB container if it doesn't exist
+  let fabContainer = document.querySelector(".fab-container");
+  if (!fabContainer) {
+    fabContainer = document.createElement("div");
+    fabContainer.className = "fab-container";
+
+    // Create theme toggle button
+    const themeBtn = document.createElement("button");
+    themeBtn.className = "fab-btn theme-toggle";
+    themeBtn.id = "fab-theme-toggle";
+    themeBtn.title = "Toggle theme";
+    themeBtn.innerHTML = "🌙";
+
+    // Create scroll to top button
+    const scrollTopBtn = document.createElement("button");
+    scrollTopBtn.className = "fab-btn scroll-top";
+    scrollTopBtn.id = "fab-scroll-top";
+    scrollTopBtn.title = "Scroll to top";
+    scrollTopBtn.innerHTML = "↑";
+
+    // Create scroll to bottom button
+    const scrollBottomBtn = document.createElement("button");
+    scrollBottomBtn.className = "fab-btn scroll-bottom";
+    scrollBottomBtn.id = "fab-scroll-bottom";
+    scrollBottomBtn.title = "Scroll to bottom";
+    scrollBottomBtn.innerHTML = "↓";
+
+    fabContainer.appendChild(themeBtn);
+    fabContainer.appendChild(scrollTopBtn);
+    fabContainer.appendChild(scrollBottomBtn);
+
+    document.body.appendChild(fabContainer);
+  }
+
+  // Handle theme toggle
+  const themeToggleBtn = document.getElementById("fab-theme-toggle");
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+
+      const currentTheme = document.body.classList.contains("dark")
+        ? "dark"
+        : "light";
+      localStorage.setItem("theme", currentTheme);
+
+      // Update icon
+      themeToggleBtn.innerHTML = currentTheme === "dark" ? "☀️" : "🌙";
+    });
+  }
+
+  // Handle scroll to top
+  const scrollTopBtn = document.getElementById("fab-scroll-top");
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Handle scroll to bottom
+  const scrollBottomBtn = document.getElementById("fab-scroll-bottom");
+  if (scrollBottomBtn) {
+    scrollBottomBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  // Toggle scroll button visibility based on scroll position
+  function updateScrollButtonVisibility() {
+    const scrollPos = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const maxScroll = docHeight - windowHeight;
+
+    // Show scroll top button if scrolled down more than 300px
+    if (scrollTopBtn) {
+      if (scrollPos > 300) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    }
+
+    // Show scroll bottom button if not at bottom
+    if (scrollBottomBtn) {
+      if (scrollPos < maxScroll - 300) {
+        scrollBottomBtn.classList.add("visible");
+      } else {
+        scrollBottomBtn.classList.remove("visible");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", updateScrollButtonVisibility);
+  updateScrollButtonVisibility();
+
+  // Set initial theme icon
+  const savedTheme = localStorage.getItem("theme") || "light";
+  if (themeToggleBtn) {
+    themeToggleBtn.innerHTML = savedTheme === "dark" ? "☀️" : "🌙";
+  }
+}

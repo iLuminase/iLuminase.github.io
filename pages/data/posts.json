@@ -6,7 +6,7 @@
     "excerpt": "Tìm hiểu về Web Crawler - công cụ thu thập dữ liệu web tự động. Từ lý thuyết cơ bản đến code Java thực tế để xây dựng web crawler.",
     "slug": "blog-web-crawler-tutorial.html",
     "category": "Programming",
-    "image": "",
+    "image": "/assets/images/blog-imgs/web-crawler-diagram.svg",
     "likes": 0
   },
   {
@@ -18,15 +18,5 @@
     "category": "Mạng máy tính",
     "image": "",
     "likes": 150
-  },
-  {
-    "id": "socket-python",
-    "title": "Socket Programming in Python: A Beginner's Guide",
-    "date": "2025-05-10",
-    "excerpt": "Learn the basics of socket programming with Python. This tutorial covers creating client-server applications...",
-    "slug": "#",
-    "category": "Programming",
-    "image": "../assets/images/skills/js.webp",
-    "likes": 75
   }
 ]

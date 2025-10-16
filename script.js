@@ -96,18 +96,20 @@ function updateFABIcon() {
 }
 
 // Initialize FAB icon on page load
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   updateFABIcon();
 
   // Add FAB button event listener
   const fabButton = document.getElementById("theme-toggle");
   if (fabButton) {
-    fabButton.addEventListener("click", function() {
+    fabButton.addEventListener("click", function () {
       // Toggle theme
       document.body.classList.toggle("dark");
       document.body.classList.toggle("light");
 
-      const currentTheme = document.body.classList.contains("dark") ? "dark" : "light";
+      const currentTheme = document.body.classList.contains("dark")
+        ? "dark"
+        : "light";
       localStorage.setItem("theme", currentTheme);
 
       // Update checkbox state
@@ -195,8 +197,17 @@ async function getFirstImageFromPost(slug) {
 
     container.innerHTML = posts
       .map(
-        (p) => `
-      <article class="article-box">
+        (p, index) => `
+      <article class="article-box ${index === 0 ? 'featured-article' : ''}">
+        <picture class="article-illustration">
+          ${
+            p.image
+              ? `<img src="${p.image.replace("../", "/")}" alt="${
+                  p.title
+                }" loading="lazy" />`
+              : ""
+          }
+        </picture>
         <div class="article-textbox">
           <div>
             <h3 class="h3">${p.title}</h3>
@@ -212,15 +223,6 @@ async function getFirstImageFromPost(slug) {
             }" class="link" target="_blank" rel="noopener">Continue reading</a>
           </div>
         </div>
-        <picture class="article-illustration">
-          ${
-            p.image
-              ? `<img src="${p.image.replace("../", "/")}" alt="${
-                  p.title
-                }" loading="lazy" />`
-              : ""
-          }
-        </picture>
       </article>
     `
       )

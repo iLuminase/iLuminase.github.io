@@ -198,7 +198,7 @@ async function getFirstImageFromPost(slug) {
     container.innerHTML = posts
       .map(
         (p, index) => `
-      <article class="article-box ${index === 0 ? 'featured-article' : ''}">
+      <article class="article-box ${index === 0 ? "featured-article" : ""}">
         <picture class="article-illustration">
           ${
             p.image

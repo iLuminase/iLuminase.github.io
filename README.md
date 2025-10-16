@@ -22,49 +22,7 @@ A **comprehensive portfolio website** combining professional showcase with an **
 
 ---
 
-## ✨ Features
 
-### 🏠 **Portfolio Features**
-
-- ✅ **Professional Landing Page** with animated hero section
-- ✅ **Skills Showcase** with technology icons and proficiency levels
-- ✅ **Project Gallery** with interactive image carousels
-- ✅ **Work Experience** timeline and achievements
-- ✅ **Contact Form** with validation and professional styling
-
-### 📝 **Blog Platform Features**
-
-- ✅ **Interactive Articles** with like, share, and comment functionality
-- ✅ **Per-Post Data Storage** using localStorage for persistence
-- ✅ **Featured Article Layout** with image-rich presentation
-- ✅ **Dynamic Content Loading** from JSON data
-- ✅ **Social Sharing** with native Web Share API fallback
-- ✅ **Floating Action Buttons** for theme toggle and navigation
-- ✅ **Responsive Navigation** with mobile-friendly menu
-
-### 🎨 **Technical Features**
-
-- ✅ **Light/Dark Theme** with system preference detection
-- ✅ **Smooth Animations** and hover effects throughout
-- ✅ **Mobile-First Design** with progressive enhancement
-- ✅ **SEO Optimized** with meta tags and structured data
-- ✅ **Fast Loading** with optimized assets and lazy loading
-- ✅ **Accessibility (a11y)** compliant design patterns
-
----
-
-## 🛠 Tech Stack
-
-| **Category**       | **Technologies**                     |
-| ------------------ | ------------------------------------ |
-| **Frontend**       | HTML5, CSS3, Vanilla JavaScript      |
-| **Styling**        | CSS Custom Properties, Flexbox, Grid |
-| **Icons & Images** | SVG, WebP, Lazy Loading              |
-| **Storage**        | localStorage for blog interactions   |
-| **Deployment**     | GitHub Pages                         |
-| **Performance**    | Lighthouse Score: 100%               |
-
----
 
 ## 📁 Project Structure
 
@@ -105,51 +63,7 @@ A **comprehensive portfolio website** combining professional showcase with an **
 
 ---
 
-## 🚀 Getting Started
 
-### **1. Clone Repository**
-
-```bash
-git clone https://github.com/iLuminase/iLuminase.github.io.git
-cd iLuminase.github.io
-```
-
-### **2. Local Development**
-
-```bash
-# Option 1: Python HTTP Server
-python -m http.server 8000
-
-# Option 2: Node.js HTTP Server
-npx http-server
-
-# Option 3: Live Server (VS Code Extension)
-# Install "Live Server" extension and right-click index.html → "Open with Live Server"
-```
-
-### **3. Access Website**
-
-Open `http://localhost:8000` in your browser
-
----
-
-## 📈 Performance & SEO
-
-### **Lighthouse Scores**
-
-- 🎯 **Performance**: 100%
-- ♿ **Accessibility**: 100%
-- 💡 **Best Practices**: 100%
-- 🔍 **SEO**: 100%
-
-### **Optimization Features**
-
-- ⚡ **Lazy Loading** for images and content
-- 🗜️ **Minified Assets** and optimized delivery
-- 📱 **Progressive Enhancement** for mobile devices
-- 🔍 **Structured Data** for search engines
-
----
 
 ## 🎨 Customization
 

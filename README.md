@@ -91,8 +91,7 @@ Modify CSS custom properties in `style.css`:
 ## 📞 Contact & Connect
 
 - 🌐 **Website**: [iLuminase.github.io](https://iluminase.github.io/)
-- 📧 **Email**: [Contact through website](https://iluminase.github.io/#contact)
-- 💼 **LinkedIn**: [Professional Profile](https://linkedin.com/in/your-profile)
+- 💼 **LinkedIn**: [Professional Profile](https://linkedin.com/in/nt-phat-softdev)
 - 🐙 **GitHub**: [@iLuminase](https://github.com/iLuminase)
 
 ---
